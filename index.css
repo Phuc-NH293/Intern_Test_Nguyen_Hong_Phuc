@@ -1,0 +1,144 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1530;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.container_item {
+  width: 100%;
+}
+
+.container_item-text {
+  width: 519px;
+  height: 200px;
+  line-height: 30px;
+
+  h3 {
+    font-size: 45px;
+    font-weight: 400;
+  }
+
+  p {
+    word-wrap: break-word;
+    font-size: 19px;
+    height: 81px;
+    font-weight: 400;
+  }
+
+}
+
+.container_item-products {
+  display: flex;
+  width: calc(100%/4);
+  gap: 20px;
+}
+
+.container_it em-products-list {
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.products-timetable {
+  display: flex;
+  gap: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .container_item-products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container_item-text {
+    width: 100%;
+    word-wrap: break-word;
+    line-height: 20px;
+  }
+
+  .container_item-products-list-img img {
+    width: calc(100% - 20px);
+    height: auto;
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container_item-text {
+    width: 100%;
+    word-wrap: break-word;
+    line-height: 20px;
+  }
+
+  .container {
+    width: auto;
+  }
+
+  .container_item-products {
+    display: block;
+    gap: 20px;
+  }
+
+  .container_item-products-list {
+    margin-top: 20px;
+  }
+
+  .container_item-products-list-img img {
+
+    height: auto;
+    border-radius: 8px;
+  }
+
+
+  .product-price {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .original-price {
+    color: #999;
+    text-decoration: line-through;
+  }
+
+  .sale-price {
+    font-weight: bold;
+  }
+
+  .products-timetable {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .timetable-left p,
+  .timetable-right p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+  }
+}
